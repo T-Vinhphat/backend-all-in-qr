@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
-const DB_URI = process.env.DB_URI;
+const MONGO_URL = process.env.MONGO_URL;
 
-mongoose.connect(DB_URI);
+mongoose.connect(MONGO_URL);
 var db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error:"));
 db.once("open", function () {
